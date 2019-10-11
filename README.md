@@ -1,177 +1,112 @@
 # Project 2 - Ames Housing Data and Kaggle Challenge
 
-Welcome to Project 2! It's time to start modeling.
+This project is a part of the curriculum for General Assembly Data Science Immersive.
 
-**Primary Learning Objectives:**
-1. Creating and iteratively refining a regression model
-2. Using [Kaggle](https://www.kaggle.com/) to practice the modeling process
-3. Providing business insights through reporting and presentation.
+#### -- Project Status: [Completed]
 
-You are tasked with creating a regression model based on the Ames Housing Dataset. This model will predict the price of a house at sale.
+## Problem/Objective
+The problem this project aims to address is to advise Ames residents which particular features of a house will drive a house price up or down during sale. 
 
-The Ames Housing Dataset is an exceptionally detailed and robust dataset with over 70 columns of different features relating to houses.
+The purpose of this project is to explore the data obtained from Ames to prospect which features of the house best influence the price of the house.
 
-Secondly, we are hosting a competition on Kaggle to give you the opportunity to practice the following skills:
+### Methods Used
+* Data Cleaning Methods
+*  Statistical Inference
+* Imputation of Missing Data
+* Data Scaling
+* Basic Modelling techniques
+* Regularisation 
+* Data Visualization
 
-- Refining models over time
-- Use of train-test split, cross-validation, and data with unknown values for the target to simulate the modeling process
-- The use of Kaggle as a place to practice data science
+### Technologies
+* Python
+* Pandas, jupyter, numpy, scipy
+* Matplotlib, Seaborn
+* Scikit Learn
 
-As always, you will be submitting a technical report and a presentation. **You may find that the best model for Kaggle is not the best model to address your data science problem.**
+## Project Description
+- Data was obtained from instructors and cleaned using these sources:
+- <https://www.kaggle.com/c/dsi-us-6-project-2-regression-challenge/submissions>[here]
 
-## Set-up
+## Needs of this project
 
-Before you begin working on this project, please do the following:
+- data exploration/descriptive statistics
+- data processing/cleaning
+- missing data imputation
+- statistical modeling
+- writeup/reporting
 
-1. Sign up for an account on [Kaggle](https://www.kaggle.com/)
-2. **IMPORTANT**: Click this link ([Regression Challenge Sign Up](https://www.kaggle.com/t/cf68f4a276f44b59a3c6c843dbf9ed1e)) to **join** the competition (otherwise you will not be able to make submissions!)
-3. Review the material on the [DSI-US-6 Regression Challenge](https://www.kaggle.com/c/dsi-us-6-project-2-regression-challenge)
-4. Review the [data description](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).
+## Getting Started
 
-## The Modeling Process
+1. Please clone this repository before using it. 
+2. Datasets are kept in .csv files that are contained in [../code/]within this repo.   
+3. Data processing/transformation scripts are being kept [../code/]
 
-1. The train dataset has all of the columns that you will need to generate and refine your models. The test dataset has all of those columns except for the target that you are trying to predict in your Regression model.
-2. Generate your regression model using the training data. We expect that within this process, you'll be making use of:
-    - train-test split
-    - cross-validation / grid searching for hyperparameters
-    - strong exploratory data analysis to question correlation and relationship across predictive variables
-    - code that reproducibly and consistently applies feature transformation (such as the preprocessing library)
-3. Predict the values for your target column in the test dataset and submit your predictions to Kaggle to see how your model does against unknown data.
-    - **Note**: Kaggle expects to see your submissions in a specific format. Check the challenge's page to make sure you are formatting your CSVs correctly!
-    - **You are limited to models you've learned in class**. In other words, you cannot use XGBoost, Neural Networks or any other advanced model for this project.
-4. Evaluate your models!
-    - consider your evaluation metrics
-    - consider your baseline score
-    - how can your model be used for inference?
-    - why do you believe your model will generalize to new data?
 
-## Submission
+## Resulting Data Dictionary
 
-**Materials must be submitted by the beginning of class on Oct 11.**
+### Final Dataframe
+|Feature|Type|Description|
+|---|---|---|
+|'overallqual'|Continuous| Overall material and finish quality|
+|'masvnrarea'|Continuous|Masonry veneer area in square feet|
+|'poolarea'|Continuous| Pool area in square feet|
+|'fireplaces'|Continuous| Number of fireplaces|
+|'grlivarea'|Continuous| Above grade (ground) living area square feet|
+|'screenporch'|Continuous| Screen porch area in square feet|
+|'lotarea'|Continuous| Lot size in square feet|
+|'3ssnporch'|Continuous| Three season porch area in square feet|
+|'bsmtfullbath'|Continuous| Basement full bathrooms|
+|'totalbsmtsf'|Continuous| Total square feet of basement area|
+|'garagearea'|Continuous| Size of garage in square feet|
+|'yearbuilt'|Continuous| Original construction date|
+|'exterqual_Fa'|Dummy| Exterior material quality_Fair|
+|'exterqual_Gd'|Dummy| Exterior material quality_Good|
+|'exterqual_TA'|Dummy| Exterior material quality_Average/Typical|
+|'kitchenqual_Fa'|Dummy| Kitchen quality_Fair|
+|'kitchenqual_Gd'|Dummy| Kitchen quality_Good|
+|'kitchenqual_TA'|Dummy|Kitchen quality_Average/Typical|
+|'bsmtqual_Fa'|Dummy| Height of the basement_Fair|
+|'bsmtqual_Gd'|Dummy| Height of the basement_Gd|
+|'bsmtqual_Po'|Dummy| Height of the basement_Po|
+|'bsmtqual_TA'|Dummy| Height of the basement_Average/Typical|
+|'garagefinish_RFn'|Dummy|  Interior finish of the garage_ Rough Finished|
+|'garagefinish_Unf'|Dummy|  Interior finish of the garage_ Unfinished|
+|'masvnrtype_BrkFace'|Dummy| Masonry veneer type_Brick Face|
+|'masvnrtype_None'|Dummy| Masonry veneer type_ None|
+|'masvnrtype_Stone'|Dummy|Masonry veneer type_Stone|
+|'heatingqc_Fa'|Dummy| Heating quality and condition_ Fair|
+|'heatingqc_Gd'|Dummy|Heating quality and condition_ Good|
+|'heatingqc_Po'|Dummy|Heating quality and condition_ Poor|
+|'heatingqc_TA'|Dummy|Heating quality and condition_ Average/Typical|
+|'neighborhood_Blueste'|Dummy|Physical locations within Ames city limits Bluestem|
+|'neighborhood_BrDale'|Dummy| Physical locations within Ames city limits Briardale|
+|'neighborhood_BrkSide'|Dummy| Physical locations within Ames city limits Brookside|
+|'neighborhood_ClearCr'|Dummy|Physical locations within Ames city limits Clear Creek|
+|'neighborhood_CollgCr'|Dummy|Physical locations within Ames city limits College Creek|
+|'neighborhood_Crawfor|Dummy|Physical locations within Ames city limits Crawford|
+|'neighborhood_Edwards'|Dummy|Physical locations within Ames city limits Edwards|
+|'neighborhood_Gilbert'|Dummy|Physical locations within Ames city limits Gilbert|
+|'neighborhood_Greens'|Dummy| Physical locations within Ames city limits Greens|
+|'neighborhood_IDOTRR'|Dummy|Physical locations within Ames city limits IOWA Dot and Railroad|
+|'neighborhood_MeadowV'|Dummy| Physical locations within Ames city limits Meadow Village|
+|'neighborhood_Mitchel'|Dummy| Physical locations within Ames city limits Mitchell|
+|'neighborhood_NAmes'|Dummy| Physical locations within Ames city limits North Ames|
+|'neighborhood_NPkVill'|Dummy| Physical locations within Ames city limits Northpark Villa|
+|'neighborhood_NWAmes'|Dummy| Physical locations within Ames city limits Northwest Ames|
+|'neighborhood_NoRidge'|Dummy| Physical locations within Ames city limits Northridge|
+|'neighborhood_NridgHt'|Dummy| Physical locations within Ames city limits Northridge Heights|
+|'neighborhood_OldTown'|Dummy| Physical locations within Ames city limits Old Town|
+|'neighborhood_SWISU'|Dummy| Physical locations within Ames city limits South & West of Iowa State University|
+|'neighborhood_Sawyer'|Dummy| Physical locations within Ames city limits Sawyer|
+|'neighborhood_SawyerW'|Dummy| Physical locations within Ames city limits Sawyer West|
+|'neighborhood_Somerst'|Dummy| Physical locations within Ames city limits  Somerset|
+|'neighborhood_StoneBr'|Dummy|Physical locations within Ames city limits  Stone Brook|
+|'neighborhood_Timber'|Dummy|Physical locations within Ames city limits Timberland|
+|'neighborhood_Veenker'|Dummy| Physical locations within Ames city limits Veenker|
+|'paveddrive_P',|Dummy| Partial Paved Drive|
+|'paveddrive_Y',|Dummy| Paved Drive|
+|'lotshape_IR2',|Dummy| General shape of property_Moderately Irregular|
+|'lotshape_IR3',|Dummy|General shape of property_Irregular|
+|'lotshape_Reg'|Dummy|General shape of property_regular|
 
-Your technical report will be hosted on Github Enterprise. Make sure it includes:
-
-- A README.md (that isn't this file)
-- Jupyter notebook(s) with your analysis and models (renamed to describe your project)
-- At least one successful prediction submission on [DSI-US-6 Regression Challenge](https://www.kaggle.com/c/dsi-us-6-project-2-regression-challenge) --  you should see your name in the "[Leaderboard](https://www.kaggle.com/c/dsi-us-6-project-2-regression-challenge/leaderboard)" tab.
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
-
-**Check with your local instructor for how they would like you to submit your repo for review.**
-
----
-
-## Presentation Structure
-
-- **Must be within time limit established by local instructor.**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. **Check with your local instructor for direction**.
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
-
-Be sure to rehearse and time your presentation before class.
-
----
-
-## Rubric
-Your local instructor will evaluate your project (for the most part) using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
-
-**Scores will be out of 27 points based on the 9 items in the rubric.** <br>
-*3 points per section*<br>
-
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
-
-### The Data Science Process
-
-**Problem Statement**
-- Is it clear what the student plans to do?
-- What type of model will be developed?
-- How will success be evaluated?
-- Is the scope of the project appropriate?
-- Is it clear who cares about this or why this is important to investigate?
-- Does the student consider the audience and the primary and secondary stakeholders?
-
-**Data Cleaning and EDA**
-- Are missing values imputed appropriately?
-- Are distributions examined and described?
-- Are outliers identified and addressed?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA?
-
-**Preprocessing and Modeling**
-- Are categorical variables one-hot encoded?
-- Does the student investigate or manufacture features with linear relationships to the target?
-- Have the data been scaled appropriately?
-- Does the student properly split and/or sample the data for validation/training purposes?
-- Does the student utilize feature selection to remove noisy or multi-collinear features?
-- Does the student test and evaluate a variety of models to identify a production algorithm (**AT MINIMUM:** linear regression, lasso, and ridge)?
-- Does the student defend their choice of production model relevant to the data at hand and the problem?
-- Does the student explain how the model works and evaluate its performance successes/downfalls?
-
-**Evaluation and Conceptual Understanding**
-- Does the student accurately identify and explain the baseline score?
-- Does the student select and use metrics relevant to the problem objective?
-- Is more than one metric utilized in order to better assess performance?
-- Does the student interpret the results of their model for purposes of inference?
-- Is domain knowledge demonstrated when interpreting results?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
-
-**Conclusion and Recommendations**
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-- Does the conclusion answer the original problem statement?
-- Does the student address how findings of this research can be applied for the benefit of stakeholders?
-- Are future steps to move the project forward identified?
-
-### Organization and Professionalism
-
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
-
-**Visualizations**
-- Are sufficient visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Are plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
-
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Are `sklearn` methods used appropriately?
-
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
-
-### REMEMBER:
-
-This is a learning environment and you are encouraged to try new things, even if they end up failing. While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
