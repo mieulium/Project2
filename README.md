@@ -68,10 +68,7 @@ The purpose of this project is to explore the data obtained from Ames to prospec
 |'masvnrtype_BrkFace'|Dummy| Masonry veneer type_Brick Face|
 |'masvnrtype_None'|Dummy| Masonry veneer type_ None|
 |'masvnrtype_Stone'|Dummy|Masonry veneer type_Stone|
-|'heatingqc_Fa'|Dummy| Heating quality and condition_ Fair|
-|'heatingqc_Gd'|Dummy|Heating quality and condition_ Good|
-|'heatingqc_Po'|Dummy|Heating quality and condition_ Poor|
-|'heatingqc_TA'|Dummy|Heating quality and condition_ Average/Typical|
+|'heatingq'|Ordinal| Heating quality and condition|
 |'paveddrive_P',|Dummy| Partial Paved Drive|
 |'paveddrive_Y',|Dummy| Paved Drive|
 |'lotshape_IR2',|Dummy| General shape of property_Moderately Irregular|
